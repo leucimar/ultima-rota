@@ -14,7 +14,15 @@ Para atualizar a página, edite os arquivos de `docs` no repositório público e
 
 Código da página: `docs/index.html`, `docs/style.css`, `docs/script.js` e `docs/site-config.js`, na branch `feature/Ultima_Rota_Page`, criada a partir de `feature/gameplay_refactory`.
 
-As imagens reais ficam em `docs/assets/screenshot1.png` a `screenshot4.png`. Substitua os arquivos mantendo os nomes. A página usa HTML/CSS puros, sem instalação de dependências ou etapa de compilação. As fontes vêm do Google Fonts, com alternativas locais caso a rede esteja indisponível.
+As imagens dos cenários ficam em `docs/assets/screenshot1.png` a `screenshot4.png`. Os retratos dos inimigos ficam em `zumbi-normal.png`, `zumbi-corredor.png` e `zumbi-tanque.png`, na mesma pasta. Substitua os arquivos mantendo os nomes. O complemento visual da revisão de novembro está em `docs/refresh.css`. A página usa HTML/CSS puros, sem instalação de dependências ou etapa de compilação. As fontes vêm do Google Fonts, com alternativas locais caso a rede esteja indisponível.
+
+### Revisão visual de 13/11/2026
+
+Capturas e retratos atualizados a partir da versão de desenvolvimento `feature/testes-upgrades-v2`, commit `fae7ae5`. Foram usados cenários e sprites reais, renderizados em uma cópia isolada da Unity. Os confrontos foram enquadrados temporariamente para apresentar a arte; não são gravações de uma partida completa.
+
+O ZIP da release **v0.1.0 foi mantido**, sem recompilação, substituição ou alteração de arquivos da release. A página informa que as imagens mostram uma versão em desenvolvimento mais recente que o executável disponível. Ao publicar um novo executável com o visual atualizado, revise esse aviso e os valores `version`/`size` em `site-config.js`.
+
+Os três botões de download, incluindo **Jogue grátis** no cabeçalho, apontam diretamente ao ZIP da última release e funcionam sem JavaScript. O ícone SVG usa `icon-download`, evitando conflito com a seção `download`. Ao trocar imagens/CSS/JS, atualize também o parâmetro de revisão `?v=` no HTML para os visitantes receberem a versão nova.
 
 ## Endereço permanente e QR code
 
@@ -26,8 +34,8 @@ O botão usa `https://github.com/CONTA/REPOSITORIO/releases/latest/download/Ulti
 
 1. No repositório que hospedará o site, abra **Settings → Pages**.
 2. Em **Build and deployment → Source**, escolha **Deploy from a branch**.
-3. Se o site for servido diretamente do repositório do jogo, escolha **feature/Ultima_Rota_Page** e a pasta **/docs**, depois **Save**.
-4. Se usar um repositório público separado apenas para distribuição, envie somente o conteúdo da pasta `docs` à raiz da branch de publicação dele. Escolha essa branch e **/(root)**. Não envie Assets, scripts C#, Library, caches ou o histórico privado do jogo a esse repositório público.
+3. Neste repositório público, escolha **feature/Ultima_Rota_Page** e a pasta **/docs**, depois **Save**. Essa é a configuração já ativa; mantenha-a nas próximas atualizações.
+4. Envie somente os arquivos da página para este repositório. Não envie Assets, scripts C#, Library, caches ou o histórico privado do jogo. Os executáveis ficam anexados às Releases, fora do histórico do site.
 5. Aguarde a publicação. A URL de um project site é `https://CONTA.github.io/REPOSITORIO/`. O nome da branch não aparece no endereço.
 
 É necessária permissão de administrador do repositório para configurar Pages. No plano gratuito, o caminho usual é um repositório público. Publicar uma página não torna os assets de uma release privada acessíveis ao público: para download sem login, hospede o ZIP em uma release de um repositório público.
