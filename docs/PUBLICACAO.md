@@ -16,11 +16,15 @@ Código da página: `docs/index.html`, `docs/style.css`, `docs/script.js` e `doc
 
 As imagens dos cenários ficam em `docs/assets/screenshot1.png` a `screenshot4.png`. Os retratos dos inimigos ficam em `zumbi-normal.png`, `zumbi-corredor.png` e `zumbi-tanque.png`, na mesma pasta. Substitua os arquivos mantendo os nomes. O complemento visual da revisão de novembro está em `docs/refresh.css`. A página usa HTML/CSS puros, sem instalação de dependências ou etapa de compilação. As fontes vêm do Google Fonts, com alternativas locais caso a rede esteja indisponível.
 
+### Revisão de 14/11/2026
+
+Novas capturas dos disparos a partir da branch `feature/gameplay-refactory-v3`, commit `82a2dd4`, incluindo os traçantes atuais das balas. Os parágrafos de leitura foram justificados, os elementos decorativos de norte e os avisos de versão foram removidos da landing page, e os créditos foram atualizados para Gameplay & CIA e seus cinco integrantes. O endereço permanente e os links de download continuam iguais.
+
 ### Revisão visual de 13/11/2026
 
 Capturas e retratos atualizados a partir da versão de desenvolvimento `feature/testes-upgrades-v2`, commit `fae7ae5`. Foram usados cenários e sprites reais, renderizados em uma cópia isolada da Unity. Os confrontos foram enquadrados temporariamente para apresentar a arte; não são gravações de uma partida completa.
 
-O ZIP da release **v0.1.0 foi mantido**, sem recompilação, substituição ou alteração de arquivos da release. A página informa que as imagens mostram uma versão em desenvolvimento mais recente que o executável disponível. Ao publicar um novo executável com o visual atualizado, revise esse aviso e os valores `version`/`size` em `site-config.js`.
+O ZIP da release **v0.1.0 foi mantido**, sem recompilação, substituição ou alteração de arquivos da release. Ao publicar outro executável, atualize os valores `version`/`size` em `site-config.js` e os metadados equivalentes no HTML.
 
 Os três botões de download, incluindo **Jogue grátis** no cabeçalho, apontam diretamente ao ZIP da última release e funcionam sem JavaScript. O ícone SVG usa `icon-download`, evitando conflito com a seção `download`. Ao trocar imagens/CSS/JS, atualize também o parâmetro de revisão `?v=` no HTML para os visitantes receberem a versão nova.
 

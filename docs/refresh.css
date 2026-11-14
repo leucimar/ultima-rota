@@ -1,28 +1,22 @@
 /* Atualização visual de novembro/2026. Mantém a identidade e o layout da página. */
 .nav-cta { min-height: 46px; }
-.hero-backdrop { background-image: url('assets/screenshot1.png?v=20261113'); filter: brightness(.8) saturate(.9); }
+.hero-backdrop { background-image: url('assets/screenshot1.png?v=20261114'); filter: brightness(.8) saturate(.9); }
 .about-art img { filter: saturate(.95); }
 .shot img { filter: saturate(.96) brightness(.95); }
 .shot-wide { aspect-ratio: 16 / 9; }
-.version-note {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  padding-block: 24px;
-  border-bottom: 1px solid var(--line);
+/* Justifica os parágrafos de leitura; títulos, botões e metadados mantêm seu alinhamento. */
+p:not(.eyebrow):not(.download-meta):not(.hero-tagline) {
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
-.version-tag {
-  flex-shrink: 0;
-  padding: 6px 9px;
-  color: var(--accent);
-  border: 1px solid #687444;
-  background: #d1ef6308;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1.1px;
-}
-.version-note p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
-.version-note strong { color: var(--ink); font-weight: 500; }
+.download-card .download-copy { max-width: 430px; margin-inline: auto; }
+.footer-credits { min-width: 0; max-width: 760px; }
+.footer .team-credit { color: #b5c0aa; line-height: 2; }
+.team-credit strong { color: var(--ink); font-weight: 600; }
+.team-members { display: inline; }
+.footer .course-credit { margin-top: 6px; }
 .enemy-showcase {
   margin-top: 44px;
   display: grid;
@@ -41,11 +35,8 @@
 .enemy-roster img { width: 100%; height: auto; object-fit: contain; }
 .enemy-roster figcaption { padding-top: 8px; font: 600 17px var(--display); letter-spacing: 1px; }
 .enemy-roster figcaption span { color: var(--accent); font-size: 11px; margin-right: 5px; }
-.download-card .build-note { max-width: 430px; margin: 20px auto 0; font-size: 10px !important; line-height: 1.8; color: #b3bfa6; }
 @media (max-width: 760px) {
   .nav-cta span { display: none; }
-  .version-note { align-items: flex-start; flex-direction: column; gap: 12px; padding-block: 22px; }
-  .version-note p { font-size: 10px; }
   .enemy-showcase { grid-template-columns: 1fr; gap: 20px; padding: 24px 18px; }
   .enemy-showcase p:not(.eyebrow) { max-width: none; }
   .enemy-roster { gap: 4px; }
