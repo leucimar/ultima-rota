@@ -6,6 +6,10 @@ Página pública e distribuição Windows do survival shooter 2D desenvolvido em
 
 **Download Windows:** https://github.com/leucimar/ultima-rota/releases/latest/download/UltimaRota-Windows-x64.zip
 
+**Versão disponível:** v1.0.0 · Windows 64 bits · 120,1 MiB.
+
+A distribuição inclui o jogo completo e o runtime, com progressão inicial sem melhorias compradas. O progresso conquistado depois é salvo normalmente.
+
 ## Manutenção
 
 A publicação usa a branch `feature/Ultima_Rota_Page` e a pasta `/docs`. Edite os arquivos nessa pasta e envie suas alterações. O GitHub Pages publica automaticamente. Veja [instruções de edição, build e atualização](docs/PUBLICACAO.md).

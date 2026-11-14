@@ -12,6 +12,18 @@ Para atualizar a página, edite os arquivos de `docs` no repositório público e
 
 ## Onde editar
 
+### Distribuição v1.0.0 — 14/11/2026
+
+Executável Windows gerado da `develop`, commit `2714d70`, após a entrada da `feature/gameplay-refactory-v3`. A antiga develop foi preservada em `feature/project_backup`. Foi necessária uma correção de compilação: remover a propriedade exclusiva do Editor `Texture2D.alphaIsTransparency` da criação do retículo. Os pixels RGBA, o desenho da mira e a gameplay foram preservados.
+
+Release estável: **v1.0.0**. ZIP: **UltimaRota-Windows-x64.zip**, **125.884.847 bytes (120,1 MiB)**. SHA-256: `454e4f16910a701cafce18d2e7395a83d79b35a391f755daf3d9e827b87295ba`.
+
+O perfil de distribuição usa **Company Name: GameplayCIA** e **Product Name: UltimaRota**, separado de DefaultCompany e dos perfis CodexValidation usados durante os testes. Os PlayerPrefs ficam fora do pacote. No primeiro uso desse perfil: quatro saldos em zero, melhorias no nível básico 1 (sem bônus), vida 100, bônus de sorte/crítico zero, pistola equipada e fuzil bloqueado. A progressão de partidas posteriores continua persistindo normalmente; não há reset em toda inicialização.
+
+Para builds oficiais futuras, mantenha essa identidade em Player Settings e altere somente a versão. Assim o progresso legítimo dos jogadores é preservado. A distribuição v1.0.0 foi gerada com Unity 6000.3.24f1, Windows x64/Mono, fora de Development Build. O ZIP contém todos os dados e DLLs necessários, o runtime Mono e LEIA-ME.txt; pastas de debug e caches do editor foram excluídas.
+
+Verificação: 81 checagens de progressão e fluxo nas cinco cenas, inicialização do executável fora da Unity, perfil standalone sem bônus e integridade dos 175 arquivos do ZIP. Os endereços permanentes da página e do download foram mantidos.
+
 Código da página: `docs/index.html`, `docs/style.css`, `docs/script.js` e `docs/site-config.js`, na branch `feature/Ultima_Rota_Page`, criada a partir de `feature/gameplay_refactory`.
 
 As imagens dos cenários ficam em `docs/assets/screenshot1.png` a `screenshot4.png`. Os retratos dos inimigos ficam em `zumbi-normal.png`, `zumbi-corredor.png` e `zumbi-tanque.png`, na mesma pasta. Substitua os arquivos mantendo os nomes. O complemento visual da revisão de novembro está em `docs/refresh.css`. A página usa HTML/CSS puros, sem instalação de dependências ou etapa de compilação. As fontes vêm do Google Fonts, com alternativas locais caso a rede esteja indisponível.
