@@ -10,6 +10,26 @@
 
 Para atualizar a página, edite os arquivos de `docs` no repositório público e envie para a branch de publicação. O Pages atualiza automaticamente. Não sincronize o repositório privado inteiro para o público.
 
+## Distribuição atual — v1.1.0, 15/11/2026
+
+Build atual gerada a partir de `feature/teste_refatoração-v2`, commit
+`48fa2fec49b5fb93391f05119fa24f445d9d88d9` do repositório privado da equipe.
+
+- **Windows x64 / Mono / Unity 6000.3.24f1**, sem Development Build.
+- **163074920 bytes (155,5 MiB)**, 197 arquivos no ZIP.
+- SHA-256: `b90678e7d4506433948fac924caf81533cd6c8af1bc9a78a1a5b90c42b8b8ba5`.
+- Identidade de salvamento mantida: **GameplayCIA / UltimaRota**. Progresso de
+  jogadores da distribuição anterior não é apagado; novos perfis começam sem
+  recursos e com os níveis básicos.
+- Inclui os ajustes de perseguição/colisão, posto, diário, quadrinhos e áudio,
+  encerramento e créditos. [Notas completas](RELEASE-1.1.0.md).
+- Pacote validado por extração, integridade arquivo a arquivo e inicialização
+  fora do Editor: menu, créditos e Voltar, inventário, quatro quadros e floresta.
+
+O site não compila a Unity. O GitHub Pages publica os arquivos HTML/CSS/JS da
+pasta `/docs`; o executável vem do **anexo da última release estável**.
+O código-fonte do jogo permanece privado. Os registros de versões abaixo são históricos.
+
 ## Onde editar
 
 ### Distribuição v1.0.0 — 14/11/2026
@@ -58,13 +78,35 @@ O botão usa `https://github.com/CONTA/REPOSITORIO/releases/latest/download/Ulti
 
 ## Gerar e atualizar o executável
 
-1. Use exatamente **Unity 6000.3.24f1**, com Windows Build Support instalado. Feche a Unity neste checkout antes de usar a linha de comando, ou gere por **Ferramentas → Ultima Rota → Gerar distribuição Windows**.
-2. Execute `Tools/Build-Windows.ps1`, informando `-UnityEditor` se a instalação estiver em outro caminho. O ZIP fica em `Builds/UltimaRota-Windows-x64.zip` e os caches/builds permanecem ignorados pelo Git.
-3. Teste a pasta extraída. O executável precisa acompanhar `UltimaRota_Data`, `MonoBleedingEdge`, `UnityPlayer.dll` e os demais arquivos de runtime; distribuir somente o `.exe` não funciona.
-4. Em **Releases → Draft a new release**, crie uma nova tag para a versão, selecione o commit correspondente, anexe `UltimaRota-Windows-x64.zip`, as instruções e o SHA-256. Publique como release estável/mais recente.
-5. Se desejar mostrar nova versão e tamanho na página, atualize `version` e `size` em `site-config.js`. O endereço do botão e o QR code não mudam.
+1. No repositório privado, selecione a versão do jogo que será distribuída.
+   Use **Unity 6000.3.24f1** e abra uma cópia isolada do projeto para preparar
+   a distribuição, preservando o checkout de trabalho e seus saves.
+2. Na cópia de distribuição, mantenha **Company Name = GameplayCIA** e
+   **Product Name = UltimaRota** em Player Settings. Incremente somente a versão.
+   Isso mantém o perfil de salvamento da distribuição anterior.
+3. Em **File → Build Profiles**, escolha Windows, arquitetura x64 e backend
+   Mono. Desmarque Development Build. Inclua, nesta ordem: **MainMenu**,
+   **SafeZoneMain**, **SafeZoneMenu**, **ForestRoom1** e **MapaCidade**.
+4. Gere `UltimaRota.exe` em uma pasta própria. Compacte o executável junto de
+   `UltimaRota_Data`, `MonoBleedingEdge`, DLLs e demais arquivos do runtime.
+   Inclua instruções, créditos e versão. Não inclua Library, fontes C#, assets
+   brutos, dados de testes ou pastas de debug marcadas DoNotShip/BackUpThisFolder.
+5. Nomeie o pacote **UltimaRota-Windows-x64.zip**, confira sua extração e jogue
+   a cópia extraída. Gere também `SHA256SUMS.txt` e `LEIA-ME.txt`.
+6. Neste repositório público, em **Releases → Draft a new release**, crie uma
+   nova tag e anexe o ZIP, checksum, instruções e créditos. Publique como release
+   estável e **mais recente**. Preserve as releases anteriores.
+7. Atualize `version`/`size` em `docs/site-config.js`, os textos equivalentes
+   em `docs/index.html` (fallback sem JavaScript), o parâmetro de cache do script
+   e a indicação no README. Envie apenas os arquivos do site para a branch
+   `feature/Ultima_Rota_Page`.
+8. Aguarde o Pages publicar e valide o botão sem login: o endereço permanente
+   deve redirecionar à tag nova. Confira tamanho e SHA-256 do arquivo baixado.
 
-Se o download ficar em outro repositório público, atualize `downloadUrl` e `releaseUrl` em `site-config.js` e os links equivalentes do HTML (que são o fallback sem JavaScript). O link dos créditos pode continuar apontando para o repositório original do grupo, indicando que o acesso ao código é privado.
+Os arquivos da build já publicados são anexos da release, fora do histórico Git
+da página. **Fazer commit/push do código do jogo não recompila nem atualiza esses
+anexos automaticamente.** Mantenha o nome do ZIP e o endereço do Pages para
+preservar os botões e o QR code.
 
 ## Validação e requisitos
 

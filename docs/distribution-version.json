@@ -1,0 +1,18 @@
+{
+  "game": "Ultima Rota",
+  "version": "1.1.0",
+  "platform": "Windows x64",
+  "backend": "Mono",
+  "unity": "6000.3.24f1",
+  "source_commit": "48fa2fec49b5fb93391f05119fa24f445d9d88d9",
+  "source_branch": "feature/teste_refatoração-v2",
+  "company": "GameplayCIA",
+  "product": "UltimaRota",
+  "source_note": "Private source retained by the team; this public release contains the compiled game.",
+  "development_build": false,
+  "zip_name": "UltimaRota-Windows-x64.zip",
+  "zip_bytes": 163074920,
+  "zip_sha256": "b90678e7d4506433948fac924caf81533cd6c8af1bc9a78a1a5b90c42b8b8ba5",
+  "zip_mib": 155.5,
+  "files": 197
+}

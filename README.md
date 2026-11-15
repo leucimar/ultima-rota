@@ -6,7 +6,7 @@ Página pública e distribuição Windows do survival shooter 2D desenvolvido em
 
 **Download Windows:** https://github.com/leucimar/ultima-rota/releases/latest/download/UltimaRota-Windows-x64.zip
 
-**Versão disponível:** v1.0.0 · Windows 64 bits · 120,1 MiB.
+**Versão disponível:** v1.1.0 · Windows 64 bits · 155,5 MiB.
 
 A distribuição inclui o jogo completo e o runtime, com progressão inicial sem melhorias compradas. O progresso conquistado depois é salvo normalmente.
 
@@ -20,3 +20,9 @@ Desenvolvido pela equipe **Gameplay & CIA**.<br>
 Ana Maia, Carlos Eduardo, Evandro Portes, Leucimar Carvalho e Lucas Carmo.
 
 Ciência da Computação · UNIPAC · 2026.
+
+## Atualização de 15/11/2026
+
+A release **v1.1.0** inclui a versão atual da equipe: perseguição dinâmica, colisões e posto corrigidos, diário, narrativa em quadrinhos, áudio e créditos atualizados. Consulte as [notas da versão](docs/RELEASE-1.1.0.md). O ZIP contém o executável e os arquivos de runtime; o código-fonte continua no repositório privado.
+
+Para atualizar o jogo no futuro: gere e teste uma nova build, publique uma nova release estável com o nome de anexo **UltimaRota-Windows-x64.zip** e atualize a versão/tamanho no site. Fazer commit de código-fonte sozinho não troca o executável baixado.
