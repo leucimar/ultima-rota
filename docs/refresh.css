@@ -35,6 +35,40 @@ p:not(.eyebrow):not(.download-meta):not(.hero-tagline) {
 .enemy-roster img { width: 100%; height: auto; object-fit: contain; }
 .enemy-roster figcaption { padding-top: 8px; font: 600 17px var(--display); letter-spacing: 1px; }
 .enemy-roster figcaption span { color: var(--accent); font-size: 11px; margin-right: 5px; }
+
+/* Trailer e ameaças usam a tipografia e as cores já definidas na página. */
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.trailer-button { border: 1px solid var(--accent); color: var(--accent); }
+.trailer-button:hover { background: var(--panel); }
+.trailer-showcase { margin-bottom: clamp(24px, 5vw, 52px); }
+.trailer-showcase h3 { font: 600 clamp(26px, 4vw, 38px)/1 var(--display); margin: 0 0 14px; }
+.trailer-frame { aspect-ratio: 16 / 9; border: 1px solid var(--line); background: var(--bg); }
+.trailer-frame video, .trailer-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.enemy-showcase { display: block; }
+.enemy-showcase > h3 { margin-bottom: 24px; }
+.enemy-group + .enemy-group { margin-top: 34px; }
+.enemy-group h4 { font: 600 22px/1 var(--display); margin: 0 0 14px; }
+.enemy-roster { gap: 10px; }
+.enemy-roster figure { padding: 8px 4px 12px; background: var(--bg); border: 1px solid var(--line); }
+.enemy-roster img { max-width: 118px; max-height: 100px; margin: auto; }
+.enemy-roster figcaption small { display: block; margin: 4px auto 0; max-width: 18ch; font: 12px/1.4 var(--font); letter-spacing: normal; color: var(--muted); }
+.boss-roster { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+.boss-card { min-width: 0; background: var(--bg); border: 1px solid #64713e; }
+.boss-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.boss-copy { padding: clamp(12px, 2vw, 20px); }
+.boss-copy span { font-size: 9px; letter-spacing: .14em; color: var(--accent); }
+.boss-copy h5 { font: 700 clamp(21px, 2.5vw, 30px)/1 var(--display); margin: 7px 0 9px; }
+.boss-copy p { text-align: left !important; }
+@media (max-width: 760px) {
+  .header { height: auto; min-height: 76px; flex-wrap: wrap; gap: 8px 14px; padding-block: 10px; }
+  .header nav { order: 3; width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+  .header nav a:last-child { display: inline; }
+  .boss-roster { grid-template-columns: 1fr; }
+  .boss-card { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; }
+  .boss-card img { height: 100%; min-height: 110px; object-fit: cover; object-position: right center; }
+  .boss-copy p:not(.eyebrow) { line-height: 1.5; }
+  .enemy-roster figcaption small { font-size: 11px; }
+}
 @media (max-width: 760px) {
   .nav-cta span { display: none; }
   .enemy-showcase { grid-template-columns: 1fr; gap: 20px; padding: 24px 18px; }
